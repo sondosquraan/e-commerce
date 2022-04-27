@@ -14,7 +14,27 @@
 			"response": []
 		},
 		{
-			"name": "New Request Copy 14",
+			"name": "productGetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/api/product/1",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productUpdate",
 			"request": {
 				"method": "GET",
 				"header": []
@@ -22,7 +42,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request Copy 13",
+			"name": "productDelete",
 			"request": {
 				"method": "GET",
 				"header": []
@@ -30,7 +50,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request Copy 12",
+			"name": "productPost",
 			"request": {
 				"method": "GET",
 				"header": []
@@ -38,7 +58,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request Copy 11",
+			"name": "productGetAll",
 			"request": {
 				"method": "GET",
 				"header": []
@@ -46,7 +66,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request Copy 10",
+			"name": "employeeGetById",
 			"request": {
 				"method": "GET",
 				"header": []
@@ -54,7 +74,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request Copy 9",
+			"name": "employeeUpdate",
 			"request": {
 				"method": "GET",
 				"header": []
@@ -62,7 +82,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request Copy 8",
+			"name": "employeeDelete",
 			"request": {
 				"method": "GET",
 				"header": []
@@ -70,7 +90,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request Copy 7",
+			"name": "employeePost",
 			"request": {
 				"method": "GET",
 				"header": []
@@ -78,15 +98,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request Copy 6",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
-		},
-		{
-			"name": "New Request Copy 5",
+			"name": "employeeGetAll",
 			"request": {
 				"method": "GET",
 				"header": []
@@ -99,7 +111,54 @@
 				"method": "GET",
 				"header": []
 			},
-			"response": []
+			"response": [
+				{
+					"name": "categoryGetById",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/api/category/2",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"category",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Apr 2022 00:41:48 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"book\",\n    \"isActive\": false,\n    \"creationDate\": null\n}"
+				}
+			]
 		},
 		{
 			"name": "categoryUpdate",
@@ -107,7 +166,63 @@
 				"method": "GET",
 				"header": []
 			},
-			"response": []
+			"response": [
+				{
+					"name": "categoryUpdate",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"book\",\r\n    \"isActive\": false,\r\n    \"creationDate\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/api/category/2",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"category",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Apr 2022 00:41:28 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"book\",\n    \"isActive\": false,\n    \"creationDate\": null\n}"
+				}
+			]
 		},
 		{
 			"name": "categoryDelete",
@@ -115,7 +230,58 @@
 				"method": "GET",
 				"header": []
 			},
-			"response": []
+			"response": [
+				{
+					"name": "categoryDelete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:9090/api/category/3",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"category",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Apr 2022 00:40:08 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Deleted successfully."
+				}
+			]
 		},
 		{
 			"name": "categoryPost",
@@ -131,7 +297,53 @@
 				"method": "GET",
 				"header": []
 			},
-			"response": []
+			"response": [
+				{
+					"name": "categoryGetAll",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/api/category",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Apr 2022 00:34:05 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"name\": \"book\",\n        \"isActive\": true,\n        \"creationDate\": null\n    },\n    {\n        \"id\": 3,\n        \"name\": \"books\",\n        \"isActive\": true,\n        \"creationDate\": null\n    }\n]"
+				}
+			]
 		}
 	]
 }
