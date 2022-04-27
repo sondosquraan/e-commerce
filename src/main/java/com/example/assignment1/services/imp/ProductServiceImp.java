@@ -49,7 +49,7 @@ import java.util.stream.Collectors;
         public ProductDto updateProduct(ProductDto productDto, long id) {
             // get product by id from the database
             Product product = productRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Category", "id", id));
-            product.setId(productDto.getId());
+            //product.setId(productDto.getId());
             product.setName(productDto.getName());
             product.setType(productDto.getType());
             product.setDateOfExpiry(productDto.getDateOfExpiry());

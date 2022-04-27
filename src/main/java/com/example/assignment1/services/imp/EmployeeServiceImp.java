@@ -1,8 +1,6 @@
 package com.example.assignment1.services.imp;
 
-import com.example.assignment1.dto.CategoryDto;
 import com.example.assignment1.dto.EmployeeDto;
-import com.example.assignment1.entity.Category;
 import com.example.assignment1.entity.Employee;
 import com.example.assignment1.exceptions.ResourceNotFoundException;
 import com.example.assignment1.repository.EmployeeRepository;
@@ -70,7 +68,7 @@ import java.util.stream.Collectors;
         @Override
         public EmployeeDto updateEmployee(EmployeeDto employeeDto, long id) {
             Employee employee =employeeRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Category", "id", id));
-            employee.setId(employeeDto.getId());
+            //employee.setId(employeeDto.getId());
             employee.setName(employeeDto.getName());
             employee.setPassword(employeeDto.getPassword());
             employee.setEmail(employeeDto.getEmail());
