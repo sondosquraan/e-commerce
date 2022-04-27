@@ -35,7 +35,7 @@ public class EmployeeController {
 
 
     @PostMapping
-    public ResponseEntity<EmployeeDto> createCategory(@Valid @RequestBody EmployeeDto employeeDto) {
+    public ResponseEntity<EmployeeDto> createEmployee(@Valid @RequestBody EmployeeDto employeeDto) {
         if (employeeDto.getId() != null) {
             log.error("Cannot have an ID {}", employeeDto);
             throw new BadRequestException(EmployeeController.class.getSimpleName(), "Id");
@@ -50,7 +50,7 @@ public class EmployeeController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteCategory(@PathVariable(name = "id") long id) {
+    public ResponseEntity<String> deleteEmployee(@PathVariable(name = "id") long id) {
         employeeServices.deleteEmployeeById(id);
         return new ResponseEntity<>("Deleted successfully.", HttpStatus.OK);
     }
